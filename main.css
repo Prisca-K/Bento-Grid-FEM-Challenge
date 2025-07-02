@@ -50,7 +50,9 @@
     --fs-xl: 3rem !important;
   }
 }
-
+body {
+  background: pink;
+}
 @layer reset {
   *,
   *::before,
