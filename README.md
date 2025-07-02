@@ -14,8 +14,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [My FEM Solution](https://your-solution-url.com)
+- Live Site URL: [My Bento Grid Challenge](https://bento-grid-fem-challenge-qw029wgi0-prisca-ezehs-projects.vercel.app/)
 
 ### Built with
 
