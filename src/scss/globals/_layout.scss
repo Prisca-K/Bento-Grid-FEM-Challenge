@@ -39,7 +39,6 @@
   border-radius: var(--bento-border-radius, var(--border-radius));
   color: var(--bento-text-color, var(--Black));
   display: grid;
-  /* checkout how to use this properly */
   align-items: var(--bento-align-vertical, start);
   align-content: var(--bento-align-vertical, start);
   justify-items: var(--bento-align-horizontal, start);
@@ -75,7 +74,7 @@
   grid-area: two;
 
   --bento-img-order: -1;
-  /* search how to use different foter options & also diff btwn drop and box shadow*/
+ 
 
   > img {
     filter: drop-shadow(0 0 1rem hsla(0, 0%, 0%, 0.125));
@@ -98,7 +97,7 @@
   --bento-bg-color: var(--Yellow-500);
   --bento-img-width: 60%;
   --bento-align-vertical: center;
-  /* --bento-align-horizontal: center; */
+
   img {
     margin-bottom: -60px;
     @include u.mq(large) {
@@ -114,9 +113,11 @@
   --bento-align-vertical: center;
   --bento-img-width: 65%;
   --bento-align-horizontal: center;
+
   @include u.mq(medium) {
     --bento-img-width: 100%;
   }
+
   @include u.mq(large) {
     --bento-align-horizontal: start;
     --bento-img-width: 120%;
@@ -144,14 +145,12 @@
   grid-area: six;
   --bento-heading-span-display: block;
   --bento-heading-span-color: var(--Black);
-  // --bento-heading-font-size: var(--fs-xl);
-  // --bento-heading-span-font-size: var(--fs-base);
   --bento-img-width: 80%;
+
   @include u.mq(large) {
     --bento-align-vertical: center;
     gap: 2rem;
     --bento-padding: 1rem;
-    // --bento-heading-font-size: var(--fs-lg);
     --bento-img-width: 100%;
   }
 }
@@ -160,10 +159,12 @@
   --bento-bg-color: var(--Yellow-100);
   --bento-img-width: 60%;
   --bento-heading-span-color: var(--Purple-500);
+
   @include u.mq(medium) {
     --bento-img-width: 80%;
     --bento-align-vertical: center;
   }
+
   @include u.mq(large) {
     --bento-img-width: 100%;
     --bento-align-vertical: center;
@@ -173,10 +174,12 @@
   grid-area: eight;
   --bento-bg-color: var(--Yellow-500);
   --bento-img-width: 60%;
+
   @include u.mq(medium) {
     --bento-align-vertical: center;
     --bento-img-width: 100%;
   }
+
   @include u.mq(large) {
     --bento-align-vertical: center;
     --bento-img-width: 110%;
