@@ -1,0 +1,36 @@
+:root {
+  --off-white: hsl(260, 12%, 95%);
+  --Purple-100: hsl(254, 88%, 90%);
+  --Purple-500: hsl(256, 67%, 59%);
+
+  --Yellow-100: hsl(31, 66%, 93%);
+  --Yellow-500: hsl(39, 100%, 71%);
+
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 7%);
+
+  /* font weights */
+  --fw-normal: 400;
+  --fw-bold: 500;
+
+  /* font sizes */
+  --fs-xxs: 0.75rem; /* 12px */
+  --fs-xs: 0.875rem; /* 14px */
+  --fs-sm: 1rem; /* 16px */
+  --fs-base: 1.75rem; /* 18px */
+  --fs-md: 2.5rem; /* 20px */
+  --fs-lg: 4rem; /* 20px */
+  --fs-xl: 4rem; /* 24px */
+
+  /* font-family */
+  --ff-base: "DM Sans", sans-serif;
+
+  /* border radius */
+  --border-radius: 1rem;
+  --border-radius-lg: 5rem;
+  @media (width > 960px) {
+    --fs-base: 1.25rem;
+    --fs-md: 2.2rem;
+    --fs-xl: 3rem;
+  }
+}

@@ -1,0 +1,184 @@
+@use "../util" as u;
+
+.bento-grid {
+  display: grid;
+  width: min(100% - 2rem, 1200px);
+  margin-block: 2rem;
+  margin-inline: auto;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    "one"
+    "two"
+    "three"
+    "four"
+    "five"
+    "six"
+    "seven"
+    "eight";
+  gap: 1rem;
+  @include u.mq(medium) {
+    grid-template-areas:
+      "one one"
+      "four three"
+      "four two "
+      "eight seven"
+      "eight six"
+      "five five ";
+  }
+  @include u.mq(large) {
+    grid-template-areas:
+      "seven one one four"
+      "seven two three four"
+      "eight two three four"
+      "eight six five five";
+  }
+}
+.bento-grid > * {
+  background-color: var(--bento-bg-color, var(--White));
+  padding: var(--bento-padding, 1.5rem);
+  border-radius: var(--bento-border-radius, var(--border-radius));
+  color: var(--bento-text-color, var(--Black));
+  display: grid;
+  /* checkout how to use this properly */
+  align-items: var(--bento-align-vertical, start);
+  align-content: var(--bento-align-vertical, start);
+  justify-items: var(--bento-align-horizontal, start);
+  gap: var(--bento-gap, 1rem);
+  text-align: var(--bento-align-horizontal, start);
+  overflow: clip;
+  p {
+    text-align: center;
+    @include u.mq(large) {
+      text-align: start;
+    }
+  }
+}
+.bento-grid img {
+  max-width: var(--bento-img-width, 100%);
+  width: var(--bento-img-width, 100%);
+  height: var(--bento-img-height, auto);
+  order: var(--bento-img-order);
+}
+.bento-grid > :nth-child(1) {
+  grid-area: one;
+  text-align: var(--bento-align-horizontal, start);
+  --bento-bg-color: var(--Purple-500);
+  --bento-text-color: var(--White);
+  --bento-padding: 2rem;
+  --bento-heading-color: var(--Yellow-500);
+  --bento-align-vertical: center;
+  --bento-align-horizontal: center;
+  // --bento-img-width: 70%;
+  --bento-img-width: 40%;
+}
+.bento-grid > :nth-child(2) {
+  grid-area: two;
+
+  --bento-img-order: -1;
+  /* search how to use different foter options & also diff btwn drop and box shadow*/
+
+  > img {
+    filter: drop-shadow(0 0 1rem hsla(0, 0%, 0%, 0.125));
+    border-radius: var(--bento-border-radius, 5rem);
+    --bento-img-width: 90%;
+
+    @include u.mq(medium) {
+      --bento-img-width: 100%;
+      --bento-align-vertical: center;
+    }
+
+    @include u.mq(large) {
+      --bento-img-width: 140%;
+      --bento-align-vertical: center;
+    }
+  }
+}
+.bento-grid > :nth-child(3) {
+  grid-area: three;
+  --bento-bg-color: var(--Yellow-500);
+  --bento-img-width: 60%;
+  --bento-align-vertical: center;
+  /* --bento-align-horizontal: center; */
+  img {
+    margin-bottom: -60px;
+    @include u.mq(large) {
+      --bento-img-width: 100%;
+      margin-bottom: -100px;
+    }
+  }
+}
+
+.bento-grid > :nth-child(4) {
+  grid-area: four;
+  --bento-bg-color: var(--Purple-100);
+  --bento-align-vertical: center;
+  --bento-img-width: 65%;
+  --bento-align-horizontal: center;
+  @include u.mq(medium) {
+    --bento-img-width: 100%;
+  }
+  @include u.mq(large) {
+    --bento-align-horizontal: start;
+    --bento-img-width: 120%;
+  }
+}
+
+.bento-grid > :nth-child(5) {
+  grid-area: five;
+  --bento-bg-color: var(--Purple-500);
+  color: var(--White);
+  --bento-img-order: -1;
+  --bento-paddding: 3rem;
+  --bento-align-vertical: center;
+  --bento-align-horizontal: center;
+  --bento-img-width: 60%;
+
+  @include u.mq(medium) {
+    --bento-align-horizontal: start;
+    --bento-img-width: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+.bento-grid > :nth-child(6) {
+  grid-area: six;
+  --bento-heading-span-display: block;
+  --bento-heading-span-color: var(--Black);
+  // --bento-heading-font-size: var(--fs-xl);
+  // --bento-heading-span-font-size: var(--fs-base);
+  --bento-img-width: 80%;
+  @include u.mq(large) {
+    --bento-align-vertical: center;
+    gap: 2rem;
+    --bento-padding: 1rem;
+    // --bento-heading-font-size: var(--fs-lg);
+    --bento-img-width: 100%;
+  }
+}
+.bento-grid > :nth-child(7) {
+  grid-area: seven;
+  --bento-bg-color: var(--Yellow-100);
+  --bento-img-width: 60%;
+  --bento-heading-span-color: var(--Purple-500);
+  @include u.mq(medium) {
+    --bento-img-width: 80%;
+    --bento-align-vertical: center;
+  }
+  @include u.mq(large) {
+    --bento-img-width: 100%;
+    --bento-align-vertical: center;
+  }
+}
+.bento-grid > :nth-child(8) {
+  grid-area: eight;
+  --bento-bg-color: var(--Yellow-500);
+  --bento-img-width: 60%;
+  @include u.mq(medium) {
+    --bento-align-vertical: center;
+    --bento-img-width: 100%;
+  }
+  @include u.mq(large) {
+    --bento-align-vertical: center;
+    --bento-img-width: 110%;
+  }
+}

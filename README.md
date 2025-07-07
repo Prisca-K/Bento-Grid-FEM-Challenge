@@ -10,12 +10,12 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot of solution](my_screenshot.png)
+![Screenshot of solution](./assets/images/my_screenshot.png)
 
 ### Links
 
-- Solution URL: [My FEM Solution](https://your-solution-url.com)
-- Live Site URL: [My Bento Grid Challenge](https://bento-grid-fem-challenge-qw029wgi0-prisca-ezehs-projects.vercel.app/)
+- Solution URL: [My FEM Solution](https://www.frontendmentor.io/challenges/bento-grid-RMydElrlOj?tab=solutions)
+- Live Site URL: [My Bento Grid Challenge](https://bento-grid-fem.vercel.app/)
 
 ### Built with
 
@@ -23,7 +23,6 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- [Styled Components](https://styled-components.com/) - For styles
 
 ### What I learned
 

@@ -1,0 +1,68 @@
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* Remove default margin */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+    margin: 0;
+  }
+
+
+  /* Make images easier to work with */
+  img,
+  picture {
+    max-width: 100%;
+    display: block;
+  }
+
+}
+
+@layer base {
+  /* Set core root defaults */
+  html {
+    line-height: 1.1;
+    font-family: var(--ff-base);
+    &:focus-within {
+      scroll-behavior: smooth;
+    }
+  }
+
+  /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+  @media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Set core body defaults */
+  body {
+    min-height: 100vh;
+    display: grid;
+    gap: 2rem;
+    place-items: center;
+    font-size: var(--fs-base);
+    background: var(--off-white);
+    text-wrap: balance;
+  }
+}

@@ -11,5 +11,13 @@
 ###############################################
 *.xd
 
-# Avoid your project being littered with annoying .DS_Store files!
+# Don't push node_modules to GitHub
+node_modules/
+
+# Don't push Vite's build output
+dist/
+
+# Optional: system/editor-specific
 .DS_Store
+.vscode/
+
