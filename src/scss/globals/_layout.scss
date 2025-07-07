@@ -172,8 +172,9 @@
 .bento-grid > :nth-child(8) {
   grid-area: eight;
   --bento-bg-color: var(--Yellow-500);
-  --bento-img-width: 60%;
+  --bento-img-width: 70%;
 
+  // --bento-align-horizontal: center;
   @include u.mq(medium) {
     --bento-align-vertical: center;
     --bento-img-width: 100%;
